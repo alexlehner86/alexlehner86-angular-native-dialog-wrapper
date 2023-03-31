@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { DialogWrapperComponent } from './dialog-wrapper/dialog-wrapper.component';
+import { DialogCloseDirective } from './directives/dialog-close.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DialogWrapperComponent
+    DialogWrapperComponent,
+    DialogCloseDirective
   ],
   imports: [
     BrowserModule

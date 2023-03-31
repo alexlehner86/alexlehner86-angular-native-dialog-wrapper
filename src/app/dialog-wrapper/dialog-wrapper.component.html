@@ -1,11 +1,15 @@
-<dialog #dialog autofocus>
+<dialog
+    #dialog
+    autofocus
+    (close)="_onClose($event)"
+>
     <div class="dialog-header">
-        <ng-content select="[dialogTitle]"></ng-content>
+        <ng-content select="[dialog-title]"></ng-content>
     </div>
     <div class="dialog-content">
-        <ng-content select="[dialogContent]"></ng-content>
+        <ng-content select="[dialog-content]"></ng-content>
     </div>
     <div class="dialog-actions">
-        <ng-content select="[dialogActions]"></ng-content>
+        <ng-content select="[dialog-actions]"></ng-content>
     </div>
 </dialog>

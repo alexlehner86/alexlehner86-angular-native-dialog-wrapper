@@ -11,12 +11,16 @@ export class AppComponent {
     @ViewChild('simpleDialog') simpleDialogEl!: DialogWrapperComponent;
     @ViewChild('complexDialog') complexDialogEl!: DialogWrapperComponent;
 
+    public simpleDialogAnswer: string | undefined;
+
     public openSimpleDialog(): void {
         this.simpleDialogEl.openDialog();
     }
 
-    public closeSimpleDialog(): void {
-        this.simpleDialogEl.closeDialog();
+    public onSimpleDialogClose(returnValue: string): void {
+        if (returnValue) {
+            this.simpleDialogAnswer = returnValue;
+        }
     }
 
     public openComplexDialog(): void {

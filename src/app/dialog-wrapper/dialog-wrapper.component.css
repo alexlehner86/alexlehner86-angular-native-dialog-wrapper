@@ -23,3 +23,7 @@ dialog[open] {
     justify-content: flex-end;
     padding: 1rem;
 }
+
+.dialog-actions:empty {
+    display: none;
+}

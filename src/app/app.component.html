@@ -1,26 +1,55 @@
 <h1>Native Dialog Wrapper Test</h1>
 <h2>Simple Dialog Example</h2>
-<button (click)="openSimpleDialog()">Open Dialog</button>
-<app-dialog-wrapper #simpleDialog>
-    <h2 dialogTitle>Your Opinion</h2>
-    <ng-container dialogContent>
-        <p>The dialog element creates a popup box on your website that draws the user's attention.</p>
+<button
+    type="button"
+    (click)="openSimpleDialog()"
+>
+    Open Dialog
+</button>
+<p *ngIf="simpleDialogAnswer">Your answer: {{simpleDialogAnswer}}</p>
+<app-dialog-wrapper
+    #simpleDialog
+    (dialogClose)="onSimpleDialogClose($event)"
+>
+    <h2 dialog-title>Your Opinion</h2>
+    <ng-container dialog-content>
+        <p>
+            The dialog element creates a popup box on your website that draws the user's attention.
+            Here are some advantages of the native dialog:
+        </p>
         <ul>
-            <li>abc</li>
-            <li>defg</li>
-            <li>dsf</li>
-            <li>uzi</li>
-            <li>sf sd</li>
-            <li>11d ds</li>
-            <li>dds</li>
+            <li>Easy to use in any project</li>
+            <li>
+                Accessible for keyboard and screen reader users
+            </li>
+            <li>Supported by all major browsers</li>
+            <li>Fully customizable and stylable</li>
         </ul>
         <p>Do you like the native dialog element?</p>
     </ng-container>
-    <button dialogActions (click)="closeSimpleDialog()">OK</button>
+    <ng-container dialog-actions>
+        <button
+            [dialog-close]="'Yes'"
+            type="button"
+        >
+            Yes
+        </button>
+        <button
+            [dialog-close]="'No'"
+            type="button"
+        >
+            No
+        </button>
+    </ng-container>
 </app-dialog-wrapper>
 <h2>Advanced Dialog Example</h2>
-<button (click)="openComplexDialog()">Select</button>
+<button
+    type="button"
+    (click)="openComplexDialog()"
+>
+    Select
+</button>
 <app-dialog-wrapper #complexDialog>
-    <h2 dialogTitle>Select a value</h2>
-    <p dialogContent>Dsljf?</p>
+    <h2 dialog-title>Select a value</h2>
+    <p dialog-content>Dsljf?</p>
 </app-dialog-wrapper>
