@@ -1,0 +1,11 @@
+<dialog #dialog autofocus>
+    <div class="dialog-header">
+        <ng-content select="[dialogTitle]"></ng-content>
+    </div>
+    <div class="dialog-content">
+        <ng-content select="[dialogContent]"></ng-content>
+    </div>
+    <div class="dialog-actions">
+        <ng-content select="[dialogActions]"></ng-content>
+    </div>
+</dialog>

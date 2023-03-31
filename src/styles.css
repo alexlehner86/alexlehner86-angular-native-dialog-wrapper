@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+dialog {
+    border: 0.125rem solid var(--border-color);
+    border-radius: 4px;
+    box-shadow: 0 11px 15px -7px #0003, 0 24px 38px 3px #00000024, 0 9px 46px 8px #0000001f;
+    font-size: 1rem;
+    max-width: min(18rem, 90vw);
+}
+
+dialog::backdrop {
+    background: rgba(36, 32, 20, 0.5);
+    backdrop-filter: blur(0.25rem);
+}
+
+dialog .dialog-header > * {
+    margin: 0;
+}
