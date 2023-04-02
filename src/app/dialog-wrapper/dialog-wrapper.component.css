@@ -7,23 +7,24 @@ dialog[open] {
     padding: 0;
 }
 
-.dialog-header {
+dialog > header {
     padding: 1rem;
     margin: 0;
     background: rgb(194, 194, 194);
 }
 
-.dialog-content {
+dialog > section {
     overflow-y: auto;
     padding: 0 1rem;
 }
 
-.dialog-actions {
+dialog > footer {
     display: flex;
     justify-content: flex-end;
     padding: 1rem;
+    background: rgb(194, 194, 194);
 }
 
-.dialog-actions:empty {
+dialog > footer:empty {
     display: none;
 }

@@ -12,6 +12,6 @@ dialog::backdrop {
     backdrop-filter: blur(0.25rem);
 }
 
-dialog .dialog-header > * {
+dialog > header > * {
     margin: 0;
 }
